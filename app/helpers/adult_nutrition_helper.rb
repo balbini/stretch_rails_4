@@ -1,0 +1,2 @@
+module AdultNutritionHelper
+end

@@ -3,6 +3,12 @@ Rails.application.routes.draw do
 
   resources :users
 
+  resources :adults
+
+  resources :seniors
+
+  resources :youths
+
   get "/login", to: "sessions#new"
   get "/logout", to: "sessions#destroy"
   post "/sessions", to: "sessions#create"
