@@ -1,0 +1,30 @@
+<div>
+  <h1>Create Profile</h1>
+  <%= form_for @user do |u| %>
+    <div>
+      <%= u.text_field :name, placeholder: 'Name' %>
+    </div>
+    <div>
+      <%= u.number_field :age, placeholder: 'Age' %>
+    </div>
+    <div>
+      <%= u.number_field :current_weight, placeholder: 'Current Weight' %>
+    </div>
+    <div>
+      <%=u.number_field :goal_weight, placeholder: 'Goal Weight' %>
+    </div>
+    <div>
+      <%= u.text_field :strength_goals, placeholder: 'Strength Goals' %>
+    </div>
+    <div>
+      <%= u.text_field :cardio_goals, placeholder: 'Cardio Goals' %>
+    </div>
+    <div>
+      <%= u.text_field :nutrition_goals,
+      placeholder: 'Nutrition Goals' %>
+    </div>
+    <div>
+      <%= u.text_field :stretch_goals, placeholder: 'Flexibility Goals' %>
+    </div>
+  <% end %>
+</div>

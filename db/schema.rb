@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180424004019) do
+ActiveRecord::Schema.define(version: 20180424005644) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -20,12 +20,12 @@ ActiveRecord::Schema.define(version: 20180424004019) do
     t.integer "age"
     t.integer "current_weight"
     t.integer "goal_weight"
-    t.integer "strength_goals"
-    t.integer "cardio_goals"
     t.string "nutrition_goals"
     t.string "stretch_goals"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "strength_goals"
+    t.string "cardio_goals"
   end
 
 end
