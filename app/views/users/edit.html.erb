@@ -1,11 +1,8 @@
 <div>
-  <h1>Create Profile</h1>
+  <h1>Edit Profile</h1>
   <%= form_for @user do |u| %>
     <div>
       <%= u.text_field :name, placeholder: 'Name' %>
-    </div>
-    <div>
-      <%= u.text_field :email, placeholder: 'Email' %>
     </div>
     <div>
       <%= u.number_field :age, placeholder: 'Age' %>
@@ -29,5 +26,7 @@
     <div>
       <%= u.text_field :stretch_goals, placeholder: 'Flexibility Goals' %>
     </div>
+    <%= u.submit 'Save' %>
   <% end %>
+  <%= link_to, user_path(@user) %>
 </div>
