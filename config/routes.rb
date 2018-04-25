@@ -9,6 +9,8 @@ Rails.application.routes.draw do
 
   resources :youths
 
+  resources :workouts
+
   get "/login", to: "sessions#new"
   get "/logout", to: "sessions#destroy"
   post "/sessions", to: "sessions#create"

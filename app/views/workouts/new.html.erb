@@ -1,0 +1,14 @@
+<div>
+  <h1>Add Workout</h1>
+  <%= form_for @workout do |u| %>
+    <div>
+      <%= u.text_field :workout_type, placeholder: 'Weights, Running' %>
+    </div>
+    <div>
+      <%= u.text_field :exercises, placeholder: 'Exercises, Distance Run' %>
+    </div>
+    <div>
+      <%= u.text_area :experience, placeholder: 'How did the workout feel?' %>
+    </div>
+  <% end %>
+</div>
