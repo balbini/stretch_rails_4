@@ -1,6 +1,7 @@
 class User < ApplicationRecord
   has_secure_password
   has_many :workouts
+  has_many :blogs
   validates :email, uniqueness: true
   validates :name, :email, :password, presence: true
 

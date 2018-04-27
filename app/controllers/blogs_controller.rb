@@ -1,5 +1,6 @@
 class BlogController < ApplicationController
   before_action :require_login, except: [:show]
+  before_action :user_match?, only: [:edit, :update, :destroy]
 
   def show
     @blog = Blog.find_by_id(params[:id])
@@ -18,11 +19,12 @@ class BlogController < ApplicationController
   def create
     @blog = Blog.create(blog_params)
     if @blog.valid?
-      @user = User.fin_by_id(session[:user_id])
+      @user = User.find_by_id(session[:user_id])
       @user.blogs << @blog
+      redirect_to user_path(@user)
     else
-      flash[:error] = "#{@blog.errors.full_messages.join(", ")}"
       redirect_to new_blog_path
+    end
   end
 
   def edit
