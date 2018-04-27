@@ -22,6 +22,7 @@ class UsersController < ApplicationController
 
   def show
     @user = User.find_by_id(params[:id])
+    @blogs = @user.blogs
   end
 
   def edit

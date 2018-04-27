@@ -11,6 +11,8 @@ Rails.application.routes.draw do
 
   resources :workouts
 
+  resources :blogs
+
   get "/login", to: "sessions#new"
   get "/logout", to: "sessions#destroy"
   post "/sessions", to: "sessions#create"

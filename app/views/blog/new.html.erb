@@ -1,0 +1,12 @@
+<div>
+  <h1>Create A New Blog Post</h1>
+  <%= form_for @blog do |u| %>
+    <div>
+      <%= u.text_field :title, placeholder: "Title" %>
+    </div>
+    <div>
+      <%= u.text_area :content, placeholder: "Content" %>
+    </div>
+    <%= u.submit %>
+  <% end %>
+</div>
