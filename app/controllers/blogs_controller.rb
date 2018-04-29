@@ -1,9 +1,13 @@
 class BlogsController < ApplicationController
+  before_action :require_login
+  before_action :user_match?, only: [:edit, :update, :destroy]
 
-
+  def index
+    @blogs = Blog.all
+  end
   def show
     @blog = Blog.find_by_id(params[:id])
-    @user = User.find_by_id(@post.user_id)
+    @user = User.find_by_id(@blog.user_id)
   end
 
   def new
@@ -37,7 +41,7 @@ class BlogsController < ApplicationController
 
   private
   def blog_params
-    params.require(:blog).permit(:title, :content)
+    params.require(:blog).permit(:article, :content)
   end
 
   def user_match?

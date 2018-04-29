@@ -1,0 +1,9 @@
+<div class="container">
+  <% @blogs.each do |blog| %>
+  <div>
+    <h4><%= blog.article %></h4>
+    <p><%= blog.content %></p>
+  </div>
+  <hr>
+  <% end %>
+</div>
