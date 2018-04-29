@@ -1,6 +1,5 @@
-class BlogController < ApplicationController
-  before_action :require_login, except: [:show]
-  before_action :user_match?, only: [:edit, :update, :destroy]
+class BlogsController < ApplicationController
+
 
   def show
     @blog = Blog.find_by_id(params[:id])
@@ -8,12 +7,7 @@ class BlogController < ApplicationController
   end
 
   def new
-    if session[:user_id] == nil
-      flash[:error] = "You must be logged in to create a blog post."
-      redirect_to user_path(session[:user_id])
-    else
       @blog = Blog.new
-    end
   end
 
   def create
