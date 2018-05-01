@@ -1,4 +1,4 @@
-<div>
+<div class="container">
   <h1>Edit Profile</h1>
   <%= form_for @user do |u| %>
     <div>
@@ -28,5 +28,5 @@
     </div>
     <%= u.submit 'Save' %>
   <% end %>
-  <%= link_to, user_path(@user) %>
+  <%= link_to 'Profile', user_path(@user) %>
 </div>

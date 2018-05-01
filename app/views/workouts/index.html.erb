@@ -1,0 +1,7 @@
+<div class="container">
+  <% @workouts.each do |workout| %>
+    <h3><%=workout.workout_type%></h3>
+    <h6><%=workout.exercises%></h6>
+    <p><%=workout.experience%></p>
+  <% end %>
+</div>
