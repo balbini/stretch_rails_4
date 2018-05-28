@@ -1,7 +1,30 @@
 <div class="container">
   <% @workouts.each do |w| %>
-    <%= <h3>w.workout_type</h3> %>
-    <%= <h6>w.exercises</h6> %>
-    <%= <p>w.experience</p> %>
-  <% end %>
+    <%if (@current_user.id === w.user_id)
+      <%= <h3>w.workout_type</h3> %>
+      <%= <h6>w.exercises</h6> %>
+      <%= <p>w.experience</p> %>
+    <% end %>
+    <% end %>
 </div>
+<!-- <% @characters.each do |c| %>
+         <% if (current_user.id === c.user_id) %>
+           <div class="col s12 m6 l6 cards-container">
+             <div class="card grid-item">
+                 <div class="card-image">
+                   <img src="<%= c.image %>">
+                 </div>
+                 <div class="card-content">
+                   <span class="card-title"><%= c.name %></span>
+                   <p>Age: <%= c.age %></p>
+                   <p>Level: <%= c.level %></p>
+                   <p>Experience: <%= c.xp %></p>
+                   <p>Class: <%= c.class_name %></p>
+                 </div>
+                 <div class="card-action">
+                 <%=link_to "Character Details", character_path(c.id) %>
+               </div>
+             </div>
+           </div>
+         <% end %>
+       <% end %> -->

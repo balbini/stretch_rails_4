@@ -1,0 +1,15 @@
+<div class="container">
+  <h1>Add Article</h1>
+  <%= form_for @adult do |u| %>
+    <div>
+      <%= u.text_field :adult_title, placeholder: 'Title' %>
+    </div>
+    <div>
+      <%= u.text_field :link, placeholder: 'link' %>
+    </div>
+    <div>
+      <%= u.text_area :description, placeholder: 'Description' %>
+    </div>
+    <%= u.submit %>
+  <% end %>
+</div>
